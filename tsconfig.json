@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "ts-node": {
+    "files": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "coverage",
+    "dist",
+    "node_modules",
+    "*.js"
+  ],
+  "compilerOptions": {
+    "types": [
+      "@types/jest"
+    ],
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "src"
+  }
+}
