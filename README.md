@@ -111,33 +111,29 @@ The app supports comprehensive weather condition mapping:
 - Severe weather (thunderstorms, fog)
 - Temperature-based icons
 
-## 🚀 Deployment
+## 🚀 Local Development & Demo
 
-### Railway (Recommended)
-1. Connect your GitHub repository to Railway
-2. Set environment variables if needed
-3. Railway will automatically detect and deploy your Node.js app
+This application is designed to run locally for demonstration purposes.
 
-### Heroku
-1. Install Heroku CLI
-2. Create Heroku app: `heroku create weatherflow-app`
-3. Deploy: `git push heroku main`
+### Quick Demo Setup
+1. **Clone and install**
+   ```bash
+   git clone git@github.com:Jokere18/Weather-Flow.git
+   cd Weather-Flow
+   pnpm install
+   ```
 
-### Vercel
-1. Install Vercel CLI: `npm i -g vercel`
-2. Deploy: `vercel --prod`
+2. **Start the application**
+   ```bash
+   pnpm dev
+   ```
 
-### Docker
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-EXPOSE 8089
-CMD ["npm", "start"]
-```
+3. **Access the application**
+   - Open your browser to `http://localhost:8089`
+   - Try searching for weather in different cities
+   - Example: "New York", "Los Angeles", "Chicago"
+
+The application will start with hot reloading enabled for development. Perfect for live demonstrations!
 
 ## 🧪 Testing
 
@@ -160,9 +156,7 @@ Tests cover:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -172,6 +166,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name - [your.email@example.com](mailto:your.email@example.com)
+Jokere18 - [GitHub Profile](https://github.com/Jokere18)
 
-Project Link: [https://github.com/Jokere18/Weather-Flow](https://github.com/Jokere18/Weather-Flow)
+Joseph Okere - [LinkedIn Profile]
+(https://www.linkedin.com/in/joseph-okere/)

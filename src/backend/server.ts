@@ -22,15 +22,13 @@ const HTTP_CLIENT = axios;
 
 const server = fastify({
   logger: true,
-
 });
-{
-  server.register(formBody)
 
-  server.register(staticFiles, {
-    root: path.join(__dirname, "../../dist"),
-  });
-}
+server.register(formBody);
+
+server.register(staticFiles, {
+  root: path.join(__dirname, "../../dist"),
+});
 
 const weatherCodeToImage = (code: number): string => {
   switch (code) {
@@ -106,12 +104,12 @@ server.get("/", async (request, reply) => {
 
 const start = async (): Promise<void> => {
   try {
-    const port = process.env.PORT ? parseInt(process.env.PORT) : 8089;
-    await server.listen({ port });
-  } catch (e) {
+    await server.listen({port: 8089})
+
+  } catch(e) {
     server.log.error(e);
-    process.exit(1);
+    process.exit(1);  
   }
-};
+}
 
 start();
